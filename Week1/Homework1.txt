@@ -1,0 +1,105 @@
+1. 
+При 3 итерациях получится 8 процессов. (2^3). Происходит это потому, что после вызова fork() выполнение обоих процессов(par and child) продолжается сразу с кода после функции fork(). Получается дерево. Причем после обращения к fork оба процесса работают параллельно и нельзя предсказать какой из процессов начнет работать раньше. При 5 итерациях получится 32 процесса (2^5).
+
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+  for(int i=1;i<=3;i++)
+  {
+    fork();
+    sleep(5);
+  }
+}
+
+2.
+#include <stdio.h>
+#include <unistd.h>
+int main()
+{
+   for(int i=1;i<=100;i++){
+      char programName[100];
+      scanf("%s", programName);
+      char *arg1 = NULL;
+      char *arg2 = NULL;
+      int pid = fork();
+      if (pid == 0){
+         execlp(programName,programName, arg1, arg2, NULL);
+      }
+   }
+   return 0;
+}
+
+3*. 
+При создании нового процесса вызовом fork все файловые дескрипторы родительского процесса копируются, но потоки вводы-выводы остаются прежними, так что порожденный процесс своими дескрипторами ссылается на те же самые потоки.
+Когда создается child, то таблица дескрипторов файлов коипруется для childa. Т.о. счетчик ссылок в записи таблицы файлов увеличивается, или просто теперь есть две ссылки на одну и ту же запись(файл).
+
+#include <unistd.h>
+#include <fcntl.h>
+
+int main(void)
+{
+    int fd;
+
+    fd = open("output", O_CREAT|O_TRUNC|O_WRONLY, 0666);
+    int pid = fork();
+    if(pid > 0){
+       write(fd, "parent",6);
+    }
+    else {
+       write(fd, "child",5);
+    }
+
+}
+-----Документация fork()--------
+Дочерний объект наследует копии набора родительских дескрипторов открытых файлов. Каждый дескриптор файла в дочернем элементе ссылается на то же описание открытого файла (см. Open (2)), что и соответствующий дескриптор файла в родительском элементе. Это означает, что два дескриптора совместно используют флаги состояния открытого файла, смещение текущего файла и управляемые сигналом атрибуты ввода / вывода (см. Описание F_SETOWN и F_SETSIG в fcntl (2)).
+
+4.
+total 0
+393280 -rw-rw-r--. 2 salimov_i salimov_i 0 Apr 26 18:39 _some_file.txt
+./abc/file.txt
+./xyz/_some_file.txt
+-------------------
+    1  touch ex4.txt
+    2  mkdir abc xyz
+    3  cd ./abc touch file.txt
+    4  cd ./abc
+    5  touch file.txt
+    6  cd ../xyz
+    7  link ../abc/file.txt _some_file.txt
+    8  ls -li
+    9  ls -li >> ../ex4.txt
+   10  cd
+   11  find ./ -inum 393280 >> ex4.txt
+   12  find ./ -inum 393280 -exec rm {} \; >> ex4.txt
+   13  find ./ -inum 393280
+   14  find ./ -inum 393280 >> ex4.txt
+   15  nano ex4.txt
+   16  history >> ex4.txt
+
+5. 
+ls -l ex5.txt # права доступа для файла ex5.txt
+	1) chmod 000 ex5.txt # для всех в смысле для всех
+	2) chmod 707 ex5.txt
+	3) chmod g=u ex5.txt
+nano:
+Here start:
+-rwxrwxrwx. 1 salimov_i salimov_i 0 Apr 26 18:44 ex5.txt
+Here solutions:
+
+-rwx---rwx. 1 salimov_i salimov_i 86 Apr 26 20:54 ex5.txt
+-rwxrwxrwx. 1 salimov_i salimov_i 144 Apr 26 21:01 ex5.txt
+Here History:
+
+    1  chmod 000 ex5.txt
+    2  ls -l ex5.txt >> ex5.txt
+    3  ls -l ex5.txt
+    7  chmod 707 ex5.txt >> ex5.txt
+    8  ls -l ex5.txt
+    9  ls -l ex5.txt >> ex5.txt
+   10  chmod g=u ex5.txt
+   11  ls -l ex5.txt >> ex5.txt
+   12  ls -l ex5.txt
+   13  nano ex5.txt
+   14  history >> ex5.txt
+
