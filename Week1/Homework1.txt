@@ -11,7 +11,27 @@ int main()
     sleep(5);
   }
 }
-
+pstree:
+        |-sshd-+-sshd---sshd---bash-+-pr1-+-pr1-+-pr1-+-pr1-+-pr1---pr1
+        |      |                    |     |     |     |     `-pr1
+        |      |                    |     |     |     |-pr1---pr1
+        |      |                    |     |     |     `-pr1
+        |      |                    |     |     |-pr1-+-pr1---pr1
+        |      |                    |     |     |     `-pr1
+        |      |                    |     |     |-pr1---pr1
+        |      |                    |     |     `-pr1
+        |      |                    |     |-pr1-+-pr1-+-pr1---pr1
+        |      |                    |     |     |     `-pr1
+        |      |                    |     |     |-pr1---pr1
+        |      |                    |     |     `-pr1
+        |      |                    |     |-pr1-+-pr1---pr1
+        |      |                    |     |     `-pr1
+        |      |                    |     |-pr1---pr1
+        |      |                    |     `-pr1
+        |      |                    `-pstree
+        |      |-sshd---sshd
+        |      `-sshd---sshd---bash
+        |-sshd---8*[{sshd}]
 2.
 #include <stdio.h>
 #include <unistd.h>
@@ -36,18 +56,20 @@ int main()
 
 #include <unistd.h>
 #include <fcntl.h>
-
+#include <stdio.h>
 int main(void)
 {
     int fd;
-
     fd = open("output", O_CREAT|O_TRUNC|O_WRONLY, 0666);
     int pid = fork();
     if(pid > 0){
        write(fd, "parent",6);
     }
-    else {
+    else if(pid==0) {
        write(fd, "child",5);
+    }
+    else {
+       perror("fail");
     }
 
 }
