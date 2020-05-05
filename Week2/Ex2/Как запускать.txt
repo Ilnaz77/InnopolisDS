@@ -1,0 +1,10 @@
+docker volume creat brat-data
+docker build -t ilnaz-test .
+
+docker run --name=succes -d -p 192.168.99.100:8888:80 -v brat-data:/var/www/ilnaz/brat-v1.3_Crunchy_Frog/data -e UN=ilnaz -e PASS=ilnaz -e MAIL=ilnaz@example.com ilnaz-test
+
+docker stop succes && docker rm succes
+
+docker run --name=succes -d -p 192.168.99.100:8888:80 -v brat-data:/var/www/ilnaz/brat-v1.3_Crunchy_Frog/data -e UN=ilnaz -e PASS=ilnaz -e MAIL=ilnaz@example.com ilnaz-test
+
+
