@@ -1,0 +1,2 @@
+docker build -t flask_hw .
+docker run --name test -p 88:5000 -d flask_hw

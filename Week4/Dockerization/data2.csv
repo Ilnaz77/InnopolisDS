@@ -1,0 +1,101 @@
+movie_id,movie,year,id,ratings
+0,tt0000001,Carmencita,1894,1,None
+1,tt0000002,Le clown et ses chiens,1892,2,None
+2,tt0000003,Pauvre Pierrot,1892,3,None
+3,tt0000004,Un bon bock,1892,4,None
+4,tt0000005,Blacksmith Scene,1893,5,None
+5,tt0000006,Chinese Opium Den,1894,6,None
+6,tt0000007,Corbett and Courtney Before the Kinetograph,1894,7,None
+7,tt0000008,Edison Kinetoscopic Record of a Sneeze,1894,8,None
+8,tt0000009,Miss Jerry,1894,9,None
+9,tt0000010,La sortie de l'usine Lumière à Lyon,1895,10,None
+10,tt0000011,Akrobatisches Potpourri,1895,11,None
+11,tt0000012,L'arrivée d'un train à La Ciotat,1896,12,None
+12,tt0000013,Neuville-sur-Saône: Débarquement du congrès des photographes à Lyon,1895,13,None
+13,tt0000014,L'arroseur arrosé,1895,14,None
+14,tt0000015,Autour d'une cabine,1894,15,None
+15,tt0000016,Barque sortant du port,1895,16,None
+16,tt0000017,Italienischer Bauerntanz,1895,17,None
+17,tt0000018,Das boxende Känguruh,1895,18,None
+18,tt0000019,The Clown Barber,1898,19,None
+19,tt0000020,The Derby 1895,1895,20,None
+20,tt0000022,Les forgerons,1895,21,None
+21,tt0000023,Baignade en mer,1895,22,None
+22,tt0000024,Opening of the Kiel Canal,1895,23,None
+23,tt0000025,The Oxford and Cambridge University Boat Race,1895,24,None
+24,tt0000026,Partie d'écarté,1896,25,None
+25,tt0000027,Place des Cordeliers à Lyon,1895,26,None
+26,tt0000028,La pêche aux poissons rouges,1895,27,None
+27,tt0000029,Repas de bébé,1895,28,None
+28,tt0000030,Rough Sea at Dover,1895,29,None
+29,tt0000031,Le saut à la couverture,1895,30,None
+30,tt0000032,Die Serpentintänzerin,1895,31,None
+31,tt0000033,La voltige,1895,32,None
+32,tt0000034,Arrivée d'un train gare de Vincennes,1896,33,None
+33,tt0000035,L'arroseur,1896,34,None
+34,tt0000036,Awakening of Rip,1896,35,None
+35,tt0000037,Baignade en mer,1896,36,None
+36,tt0000038,The Ball Game,1898,37,None
+37,tt0000039,Barnet Horse Fair,1896,38,None
+38,tt0000040,Barque sortant du port de Trouville,1896,39,None
+39,tt0000041,Bataille de neige,1897,40,None
+40,tt0000042,Bateau-mouche sur la Seine,1896,41,None
+41,tt0000043,Batteuse à vapeur,1896,42,None
+42,tt0000044,Le bivouac,1896,43,None
+43,tt0000045,Les blanchisseuses,1896,44,None
+44,tt0000046,Bois de Boulogne,1896,45,None
+45,tt0000047,Boulevard des Italiens,1896,46,None
+46,tt0000048,The Boxing Kangaroo,1896,47,None
+47,tt0000049,"Boxing Match; or, Glove Contest",1896,48,None
+48,tt0000050,Bébé et fillettes,1896,49,None
+49,tt0000051,Campement de bohémiens,1896,50,None
+50,tt0000052,Carga de rurales,1896,51,None
+51,tt0000053,A Chegada do Comboio Inaugural à Estação Central do Porto,1897,52,None
+52,tt0000054,Les chevaux de bois,1896,53,None
+53,tt0000055,Le chiffonnier,1896,54,None
+54,tt0000056,Uma Corrida de Touros no Campo Pequeno,1896,55,None
+55,tt0000057,Cortège de tzar allant à Versailles,1896,56,None
+56,tt0000058,Cortège de tzar au Bois de Boulogne,1896,57,None
+57,tt0000059,Couronnement de la rosière,1896,58,None
+58,tt0000060,Dancing Darkies,1896,59,None
+59,tt0000061,Dancing Girls,1896,60,None
+60,tt0000062,Danse serpentine,1896,61,None
+61,tt0000063,Dessinateur express,1896,62,None
+62,tt0000064,Dessinateur: Chamberlain,1896,63,None
+63,tt0000065,Dessinateur: Reine Victoria,1896,64,None
+64,tt0000066,Dessinateur: Von Bismark,1896,65,None
+65,tt0000067,Dix chapeaux en 60 secondes,1896,66,None
+66,tt0000068,Déchargement de bateaux,1896,67,None
+67,tt0000069,Défense d'afficher,1896,68,None
+68,tt0000070,Démolition d'un mur,1896,69,None
+69,tt0000071,Départ des automobiles,1896,70,None
+70,tt0000072,Départ des officiers,1896,71,None
+71,tt0000073,Effets de mer sur les rochers,1896,72,None
+72,tt0000074,Enfants jouant sur la plage,1896,73,None
+73,tt0000075,Escamotage d'une dame au théâtre Robert Houdin,1896,74,None
+74,tt0000076,Exit of Rip and the Dwarf,1896,75,None
+75,tt0000077,"Le fakir, mystère indien",1896,76,None
+76,tt0000078,Feira de Gado na Corujeira,1896,77,None
+77,tt0000079,La gare Saint-Lazare,1896,78,None
+78,tt0000080,Grandes manoeuvres,1896,79,None
+79,tt0000081,Les haleurs de bateaux,1896,80,None
+80,tt0000082,A Hard Wash,1896,81,None
+81,tt0000083,Les indiscrets,1896,82,None
+82,tt0000084,Les ivrognes,1896,83,None
+83,tt0000085,Jardinier brûlant des herbes,1896,84,None
+84,tt0000086,Jetée et plage de Trouville (1er partie),1896,85,None
+85,tt0000087,Jetée et plage de Trouville (2e partie),1896,86,None
+86,tt0000088,Jour de marché à Trouville,1896,87,None
+87,tt0000089,Départ de Jérusalem en chemin de fer,1897,88,None
+88,tt0000090,Libération des territoriaux,1896,89,None
+89,tt0000091,Le manoir du diable,1896,90,None
+90,tt0000092,Marée montante sur Brise-Larmes,1896,91,None
+91,tt0000093,Melbourne,1896,92,None
+92,tt0000094,Miss de Vere,1896,93,None
+93,tt0000095,Le papier protée,1896,94,None
+94,tt0000096,Place Saint-Augustin,1896,95,None
+95,tt0000097,"Place de l'Opéra, 1er aspect",1896,96,None
+96,tt0000098,"Place de l'Opéra, 2e aspect",1896,97,None
+97,tt0000099,Place de la Bastille,1896,98,None
+98,tt0000100,Place de la Concorde,1896,99,None
+99,tt0000101,Place du théâtre français,1896,100,None
