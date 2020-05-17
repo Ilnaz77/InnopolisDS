@@ -1,2 +1,13 @@
+Здесь предобработка ихсодного data.tsv:
+data = df[['tconst', 'originalTitle', 'startYear']]
+data = data.rename(columns={'tconst': 'movie_id', 'originalTitle': 'movie', 'startYear':'year'})
+data['ratings'] = None
+data = data[data.columns].astype('str')
+data.to_csv('data2.csv',index_label=False,sep=',')
+---------------------------------------------------------------------
+Здесь Докер команды:
 docker build -t flask_hw .
 docker run --name test -p 88:5000 -d flask_hw
+------------------------------------
+Тестим пост запрос:
+curl -X POST -H "Content-type:application/json" --data "{\"likes\":{\"tt0000001\":1,\"tt0000002\":0, \"tt00000010\":0}}" localhost:5555/suggest/10
