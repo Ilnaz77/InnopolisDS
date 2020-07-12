@@ -1,0 +1,7 @@
+import requests
+# files = [('file', open('a.jpg', 'rb')), ('file', open('b.jpg', 'rb')), ('file', open('test.txt', 'rb'))]
+# files = [('file', open('a.jpg', 'rb')), ('file', open('b.jpg', 'rb'))]
+# files = []
+
+resp = requests.post("http://127.0.0.1:5555/", files=files)
+print(resp.text)
